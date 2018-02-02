@@ -8,7 +8,7 @@ mongo_dbname = "douban_movie"
 
 redis_host = "127.0.0.1"
 redis_port = 6379
-redis_db = 5
+redis_dbnum = 5
 redis_table = "douban_movie"
 
 test_url = "https://movie.douban.com/subject/26799731/"
