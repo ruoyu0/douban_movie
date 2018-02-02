@@ -35,9 +35,9 @@ class MovieSpider(scrapy.Spider):
             data_mapping.update(self.parse_part_info(info_html))
             if data_mapping.get(u'制片国家/地区', ""):
                 if isinstance(data_mapping[u'制片国家/地区'], list):
-                    data_mapping[u"所属国家"] = data_mapping[u'制片国家/地区'][0]
+                    data_mapping[u"所属国家"] = data_mapping[u'制片国家/地区'][0].split(' ')[0]
                 else:
-                    data_mapping[u"所属国家"] = data_mapping[u'制片国家/地区'].strip()
+                    data_mapping[u"所属国家"] = data_mapping[u'制片国家/地区'].strip().split(' ')[0]
 
         inte_selector_list = response.xpath(".//div[@id='interest_sectl']")
         if inte_selector_list:
