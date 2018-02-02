@@ -12,7 +12,7 @@ def get_redis_client():
     # 全局唯一
     global redis_client
     if redis_client is None:
-        redis_client = redis.StrictRedis(host=conf.redis_host, port=conf.redis_port, db=conf.redis_db)
+        redis_client = redis.StrictRedis(host=conf.redis_host, port=conf.redis_port, db=conf.redis_dbnum)
     return redis_client
 
 if __name__ == '__main__':
