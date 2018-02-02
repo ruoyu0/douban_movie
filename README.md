@@ -3,7 +3,13 @@
 * 该爬虫使用了redis(docker) - 用作url判重
 * 该爬虫使用了mongodb(docker) - 用作数据存储
 * 该爬虫使用了请求延时的中间件(在./douban_movie/middlewares.py文件中)
+
 * 该爬虫使用了动态代理
 * ```./common/order.py```文件没有上传，内含动态代理的order值(该值能获取动态代理IP)
 * 由于豆瓣网站的数据不需要动态加载, 该爬虫没有使用splash(docker)工具
+
+##### 相关容器的构建与运行
+* 见[./common/init.sh](./common/init.sh)文件
+
+##### 执行
 * 在当前目录下，直接执行```./main.py```就能运行该爬虫
